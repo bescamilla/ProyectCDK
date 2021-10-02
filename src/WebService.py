@@ -1,6 +1,8 @@
+
 #!/bin/python3
 
-from flask import Flask
+from flask import Flask, request
+import controller
 
 app = Flask(__name__)
 
@@ -17,5 +19,18 @@ def calculacuadrado(num):
     resp = num * num
     return 'Respuesta: %f' % resp
 
+@app.route('/rlineal', methods=['POST'])
+def preRLineal():
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        vx = data['vx']
+        vy = data['vy']
+        x = data['x']
+        return controller.getRLineal(vx, vy, x)
+    else:
+        return 'URL Incorrecta'
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000, debug=True)
+
