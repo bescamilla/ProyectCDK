@@ -12,7 +12,7 @@ pipeline {
       parallel {
         stage('Docker env') {
           steps {
-            sh 'env'
+            sh 'docker -v'
           }
         }
 
