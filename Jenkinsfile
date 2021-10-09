@@ -44,5 +44,11 @@ pipeline {
       }
     }
 
+    stage('Stop container') {
+      steps {
+        sh './script/stop.sh'
+      }
+    }
+
   }
 }
