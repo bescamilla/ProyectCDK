@@ -1,1 +1,1 @@
-docker build -t cdk/api_cdk_sep:$1 .
+docker build -t bescamilla/api_cdk_sep:$1 .
