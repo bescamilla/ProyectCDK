@@ -39,6 +39,7 @@ pipeline {
 
     stage('Test') {
       steps {
+        echo 'Prueba'
         sleep 5
         sh './scripts/test.sh'
       }
