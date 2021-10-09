@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Inicio_env') {
       steps {
-        echo 'Iniciando construcción'
+        echo 'Iniciando construccion'
         sh 'env'
       }
     }
