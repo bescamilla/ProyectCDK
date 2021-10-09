@@ -53,7 +53,7 @@ pipeline {
 
     stage('Publish Hub') {
       steps {
-        sh 'cat versionImage | xarg ./scripts/upload.sh'
+        sh 'cat versionImage | xargs ./scripts/upload.sh'
       }
     }
 
