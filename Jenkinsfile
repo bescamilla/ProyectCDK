@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh 'cat versionImage | xargs ./scripts/build.sh'
+      }
+    }
+
   }
 }
