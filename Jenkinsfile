@@ -46,7 +46,7 @@ pipeline {
 
     stage('Stop container') {
       steps {
-        sh './script/stop.sh'
+        sh './scripts/stop.sh'
       }
     }
 
